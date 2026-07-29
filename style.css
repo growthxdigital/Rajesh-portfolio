@@ -216,6 +216,55 @@ button:hover{
 }
 
 /* ==========================
+   ACHIEVEMENTS
+========================== */
+
+#achievements{
+    padding:80px 5%;
+}
+
+#achievements h2{
+    color:#00bfff;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.achievement-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.achievement-card{
+    width:250px;
+    background:#161b22;
+    padding:35px 20px;
+    border-radius:20px;
+    border:2px solid rgba(0,191,255,.2);
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,191,255,.1);
+}
+
+.achievement-card:hover{
+    transform:translateY(-10px);
+    border-color:#00bfff;
+    box-shadow:0 20px 40px rgba(0,191,255,.35);
+}
+
+.achievement-card h3{
+    font-size:42px;
+    color:#00bfff;
+    margin-bottom:15px;
+}
+
+.achievement-card p{
+    font-size:18px;
+    color:#cccccc;
+    margin-bottom:0;
+}
+
+/* ==========================
    MOBILE
 ========================== */
 
@@ -246,7 +295,8 @@ button:hover{
         width:100%;
     }
 
-    .project-card{
+    .project-card,
+    .achievement-card{
         width:100%;
     }
 
