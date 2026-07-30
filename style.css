@@ -574,59 +574,285 @@ footer hr{
     margin-bottom:0;
 
 }
-
-/*==================================
+/*=========================
  EXPERIENCE
-==================================*/
+==========================*/
 
 #experience{
 
-padding:100px 6%;
+    padding:80px 5%;
 
 }
 
 #experience h2{
 
-font-size:44px;
+    color:#00bfff;
 
-color:#00bfff;
+    font-size:42px;
 
-margin-bottom:60px;
+    margin-bottom:50px;
 
 }
 
 .experience-container{
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    justify-content:center;
 
-gap:45px;
+    flex-wrap:wrap;
+
+    gap:30px;
 
 }
 
 .experience-card{
 
-background:#161b22;
+    width:370px;
 
-border:2px solid rgba(0,191,255,.2);
+    background:#161b22;
 
-border-radius:22px;
+    border:2px solid rgba(0,191,255,.20);
 
-padding:35px;
+    border-radius:20px;
 
-text-align:left;
+    padding:30px;
 
-transition:.4s;
+    position:relative;
 
-position:relative;
+    transition:.4s;
 
-overflow:hidden;
+    overflow:hidden;
 
-box-shadow:0 0 20px rgba(0,191,255,.08);
+    box-shadow:0 0 20px rgba(0,191,255,.08);
 
 }
 
+.experience-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00bfff;
+
+    box-shadow:
+    0 0 20px rgba(0,191,255,.40),
+    0 0 40px rgba(0,191,255,.25);
+
+}
+
+/* Animated Border */
+
+.experience-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:20px;
+
+    padding:2px;
+
+    background:linear-gradient(90deg,#00bfff,#00ffd5,#00bfff);
+
+    background-size:300%;
+
+    animation:borderMove 5s linear infinite;
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    pointer-events:none;
+
+}
+
+@keyframes borderMove{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
+
+.exp-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#00bfff;
+
+    color:#000;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    animation:pulse 2s infinite;
+
+}
+
+.green{
+
+    background:#19c37d;
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.experience-card h3{
+
+    color:#00bfff;
+
+    font-size:25px;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+}
+
+.experience-card h4{
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+}
+
+.exp-date{
+
+    color:#9fdfff;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.exp-highlights{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.exp-highlights span{
+
+    background:#0d1117;
+
+    border:1px solid #00bfff;
+
+    color:#00bfff;
+
+    padding:8px 12px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.experience-card ul{
+
+    text-align:left;
+
+    padding-left:20px;
+
+    margin-bottom:20px;
+
+}
+
+.experience-card li{
+
+    margin-bottom:10px;
+
+    color:#d6d6d6;
+
+    line-height:1.7;
+
+}
+
+.exp-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.exp-tags span{
+
+    background:#00bfff;
+
+    color:#000;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.exp-tags span:hover{
+
+    transform:translateY(-4px);
+
+    background:#fff;
+
+}
+
+@media(max-width:768px){
+
+.experience-card{
+
+width:100%;
+
+}
+
+}
 /* Animated Border Glow */
 
 .experience-card::before{
