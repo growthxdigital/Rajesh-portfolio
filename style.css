@@ -521,9 +521,39 @@ footer hr{
 
 .service-icon{
 
-    font-size:50px;
+    width:90px;
 
-    margin-bottom:20px;
+    height:90px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,191,255,.1);
+
+    border-radius:50%;
+
+    color:#00bfff;
+
+    font-size:40px;
+
+    transition:.4s;
+
+}
+
+.service-card:hover .service-icon{
+
+    background:#00bfff;
+
+    color:#000;
+
+    transform:rotate(360deg);
+
+}
 
 }
 
